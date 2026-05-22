@@ -50,11 +50,11 @@ _start:
     mov edi, consumosReajustados
 
 loop_soma:
-    add al, [esi]
-    inc esi
-    dec byte [cont]
-    cmp byte [cont], 0
-    jg loop_soma
+    add al, [esi] ; Adiciona no registrador 'AL' o valor apontado no 'ESI'
+    inc esi ; Incrementa 1 no registrador de ponteiro 'ESI' | próximo carregador
+    dec byte [cont] ; Decrescenta 1 na variável de contador
+    cmp byte [cont], 0 ; Compara a variável de contador com '0'
+    jg loop_soma ; Se o contador for > que '0' volta e roda o loop_soma novamente
 
 
     mov [soma], al ; Atribui o resultado das somas na variável soma
@@ -64,7 +64,7 @@ loop_soma:
     cmp al, [potMax] ; aqui 'al' tem o valor da soma
     jg limite_excedido
 
-    jmp imprimir_resultado
+    jmp imprimir_resultado ; Se as potências sendo utilizadas não excederem a potência máxima disponível pula para o print final
 
 
 limite_excedido:
@@ -90,7 +90,6 @@ loop_reajuste:
 
     ; saiu do loop
 
-       ; mov [consumosReajustados], edi ; Atribui os valores guardados no registrador 'edi' à variável de consumos reajustados
     jmp imprimir_resultado ; Redireciona para imprimir_resultado (se não foi redirecionado acima / saiu do loop)
 
     
