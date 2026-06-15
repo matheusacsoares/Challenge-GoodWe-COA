@@ -1,86 +1,91 @@
 # ChargeGrid Intelligence
-
 ### Challenge FIAP + GoodWe 2026
 
-Sistema inteligente para gerenciamento energético de eletropostos comerciais, com foco em eficiência energética, estabilidade da rede elétrica e integração com fontes renováveis.
+Sistema inteligente para gerenciamento energético de eletropostos, com foco em eficiência energética, estabilidade da rede elétrica e integração com fontes renováveis.
 
 ---
 
-# Integrantes
+## Integrantes
 
-* Giovanna Ferreira Almeida - RM571822
-* Lucas Bellezzo Figueiredo - RM569734
-* Maria Luiza Vieira de Freitas - RM571535
-* Matheus Arruda Camara Soares - RM571594
-* Matheus Sabino da Silva Guedes - RM572907
+- Giovanna Ferreira Almeida - RM571822
+- Lucas Bellezzo Figueiredo - RM569734
+- Maria Luiza Vieira de Freitas - RM571535
+- Matheus Arruda Camara Soares - RM571594
+- Matheus Sabino da Silva Guedes - RM572907
+
+---
+
+## 🔗 Navegação Rápida
+
+[Visão Geral](#visão-geral-do-projeto) •
+[Assembly](#sprint-1---controle-dinâmico-de-potência-em-assembly) •
+[Circuito Lógico](#sprint-2---sistema-inteligente-de-prioridade-energética) •
+[Sustentabilidade](#relação-com-sustentabilidade) •
+[Vídeo](#demonstração)
 
 ---
 
 # Índice
 
-1. Visão Geral do Projeto
-2. Problema Identificado
-3. Objetivos
-4. Arquitetura da Solução
-5. Sprint 1 - Controle Dinâmico de Potência em Assembly
-
-   * Funcionamento
-   * Trechos do Código
-   * Benefícios
-6. Sprint 2 - Sistema Inteligente de Prioridade Energética
-
-   * Circuito Lógico
-   * Expressão Booleana
-   * Funcionamento
-   * Simulação no Tinkercad
-7. Relação com Sustentabilidade
-8. Resultados Obtidos
-9. Demonstração
-10. Tecnologias Utilizadas
-11. Referências
+- [Visão Geral do Projeto](#visão-geral-do-projeto)
+- [Problema Identificado](#problema-identificado)
+- [Objetivos](#objetivos)
+- [Arquitetura da Solução](#arquitetura-da-solução)
+- [Sprint 1 - Controle Dinâmico de Potência em Assembly](#sprint-1---controle-dinâmico-de-potência-em-assembly)
+  - [Objetivo](#objetivo)
+  - [Funcionamento](#funcionamento)
+  - [Arquitetura Utilizada](#arquitetura-utilizada)
+  - [Trechos Relevantes do Código](#trechos-relevantes-do-código)
+  - [Benefícios](#benefícios)
+- [Sprint 2 - Sistema Inteligente de Prioridade Energética](#sprint-2---sistema-inteligente-de-prioridade-energética)
+  - [Expressão Booleana](#expressão-booleana)
+  - [Variáveis](#variáveis)
+  - [Funcionamento do Circuito](#funcionamento-do-circuito)
+  - [Circuito Implementado](#circuito-implementado)
+  - [Simulações Realizadas](#simulações-realizadas)
+- [Relação com Sustentabilidade](#relação-com-sustentabilidade)
+- [Resultados Obtidos](#resultados-obtidos)
+- [Demonstração](#demonstração)
+- [Tecnologias Utilizadas](#tecnologias-utilizadas)
+- [Referências](#referências)
 
 ---
 
-# 1. Visão Geral do Projeto
+# Visão Geral do Projeto
 
 O ChargeGrid Intelligence é uma proposta de sistema inteligente para gerenciamento energético de eletropostos comerciais.
 
-A solução busca controlar a distribuição de potência entre carregadores de veículos elétricos e auxiliar a tomada de decisões energéticas utilizando informações sobre geração solar, armazenamento em baterias e condições da rede elétrica.
+A solução foi desenvolvida para auxiliar o controle da potência distribuída entre veículos elétricos e otimizar o uso dos recursos energéticos disponíveis, buscando reduzir desperdícios e aumentar a eficiência da infraestrutura.
 
-O objetivo é aumentar a eficiência energética da infraestrutura, reduzir desperdícios e contribuir para uma operação mais sustentável.
+Para isso, o projeto foi dividido em dois módulos complementares:
 
----
-
-# 2. Problema Identificado
-
-O crescimento da mobilidade elétrica aumenta continuamente a demanda por estações de recarga.
-
-Quando vários veículos são carregados simultaneamente, a potência total demandada pode ultrapassar os limites disponíveis da infraestrutura elétrica.
-
-Além disso, muitos sistemas realizam esse gerenciamento utilizando softwares de alto nível que exigem maior processamento computacional e consumo energético.
-
-Os principais desafios são:
-
-* Sobrecarga da rede elétrica;
-* Distribuição ineficiente da potência disponível;
-* Baixo aproveitamento da energia renovável;
-* Desperdício de recursos computacionais;
-* Falta de controle inteligente das cargas.
+- Controle Dinâmico de Potência em Assembly;
+- Sistema Inteligente de Prioridade Energética utilizando Circuitos Lógicos.
 
 ---
 
-# 3. Objetivos
+# Problema Identificado
 
-* Distribuir potência entre múltiplos carregadores;
-* Evitar sobrecarga da infraestrutura elétrica;
-* Priorizar o uso de energia renovável;
-* Utilizar armazenamento energético quando necessário;
-* Reduzir o consumo computacional do sistema de controle;
-* Demonstrar a viabilidade técnica da solução através de protótipos funcionais.
+O crescimento da mobilidade elétrica aumenta a demanda por pontos de recarga.
+
+Quando vários veículos realizam carregamento simultaneamente, a potência exigida pode ultrapassar a capacidade da instalação elétrica, causando riscos à infraestrutura e reduzindo a eficiência do sistema.
+
+Além disso, sistemas de controle mal otimizados podem consumir recursos computacionais desnecessários, aumentando o consumo energético do próprio hardware responsável pelo gerenciamento.
 
 ---
 
-# 4. Arquitetura da Solução
+# Objetivos
+
+- Evitar sobrecargas na infraestrutura elétrica;
+- Distribuir potência de forma inteligente entre carregadores;
+- Priorizar o uso de fontes renováveis;
+- Melhorar o aproveitamento energético;
+- Reduzir o consumo computacional do sistema de controle;
+- Demonstrar a viabilidade técnica da solução através de protótipos funcionais.
+
+---
+
+# Arquitetura da Solução
 
 ```text
           Painéis Solares
@@ -106,49 +111,51 @@ Controle de Potência     Sistema de Prioridade
            Veículos Elétricos
 ```
 
-A solução foi dividida em dois módulos principais.
+O sistema utiliza um módulo responsável pelo gerenciamento da potência distribuída e outro responsável pela tomada de decisões energéticas baseadas nas condições da rede e das fontes renováveis.
 
 ---
 
-# 5. Sprint 1 - Controle Dinâmico de Potência em Assembly
+# Sprint 1 - Controle Dinâmico de Potência em Assembly
 
 ## Objetivo
 
-Controlar a distribuição de potência entre carregadores ativos, evitando que a demanda total ultrapasse a capacidade máxima da rede elétrica.
+Desenvolver um algoritmo capaz de monitorar o consumo dos carregadores e redistribuir a potência disponível quando a demanda ultrapassar os limites da instalação.
 
 ---
 
 ## Funcionamento
 
-O algoritmo monitora o consumo dos carregadores conectados.
+O programa simula diversos carregadores conectados simultaneamente.
 
-Quando a soma das potências ultrapassa o limite definido para a instalação, o sistema realiza automaticamente um reajuste proporcional da potência distribuída para cada carregador.
+Primeiramente é realizada a soma de todos os consumos.
 
-Esse procedimento evita sobrecargas sem interromper completamente as sessões de recarga.
+Caso o valor total ultrapasse a potência máxima permitida, o sistema recalcula automaticamente a potência atribuída a cada carregador, realizando um balanceamento proporcional.
+
+Dessa forma a infraestrutura permanece protegida sem interromper totalmente as sessões de recarga.
 
 ---
 
 ## Arquitetura Utilizada
 
-O código foi desenvolvido para arquitetura x86-64.
+O projeto foi desenvolvido utilizando Assembly x86-64.
 
-A implementação utiliza diretamente registradores como:
+O controle é realizado diretamente através de registradores como:
 
-* AL
-* BL
-* DL
-* ESI
-* EDI
+- AL
+- BL
+- DL
+- ESI
+- EDI
 
-A manipulação direta dos registradores reduz abstrações de software e diminui a quantidade de instruções executadas pelo processador.
+Essa abordagem reduz abstrações de software de alto nível e diminui a quantidade de instruções executadas pelo processador.
 
 ---
 
-## Trechos Relevantes
+## Trechos Relevantes do Código
 
 ### Loop de Soma
 
-Responsável por calcular a potência total demandada.
+Responsável por calcular a potência total utilizada.
 
 ```assembly
 loop_soma:
@@ -161,7 +168,7 @@ loop_soma:
 
 ### Loop de Reajuste
 
-Responsável por redistribuir a potência proporcionalmente.
+Responsável por recalcular a potência distribuída para cada carregador.
 
 ```assembly
 loop_reajuste:
@@ -183,14 +190,14 @@ loop_reajuste:
 
 ## Benefícios
 
-* Menor número de ciclos de CPU;
-* Menor consumo energético do hardware;
-* Resposta rápida para situações críticas;
-* Possibilidade de execução em dispositivos embarcados de baixo consumo.
+- Menor quantidade de ciclos de CPU;
+- Menor consumo energético do hardware;
+- Resposta rápida para situações críticas;
+- Possibilidade de utilização em sistemas embarcados de baixo consumo.
 
 ---
 
-# 6. Sprint 2 - Sistema Inteligente de Prioridade Energética
+# Sprint 2 - Sistema Inteligente de Prioridade Energética
 
 ## Objetivo
 
@@ -202,36 +209,40 @@ Determinar quando uma fonte complementar de energia pode ser utilizada para auxi
 
 Expressão original:
 
+```text
 S = D · ((A + B) · (C̅ + A))
+```
 
 Expressão simplificada:
 
+```text
 S = D(A + BC̅)
+```
+
+<img width="479" height="194" alt="Captura de tela 2026-06-11 160806" src="https://github.com/user-attachments/assets/ac4cd00c-92f9-4e99-b5bb-e716aa75d060" />
+
 
 ---
 
 ## Variáveis
 
-| Variável | Significado                         |
-| -------- | ----------------------------------- |
-| A        | Energia Solar Disponível            |
-| B        | Bateria Disponível                  |
-| C        | Horário de Pico                     |
-| D        | Necessidade de Energia Complementar |
-| S        | Fonte Complementar Autorizada       |
+| Variável | Significado |
+|-----------|-----------|
+| A | Energia Solar Disponível |
+| B | Banco de Baterias Disponível |
+| C | Horário de Pico |
+| D | Necessidade de Energia Complementar |
+| S | Fonte Complementar Autorizada |
 
 ---
 
-## Funcionamento
+## Funcionamento do Circuito
 
-O circuito analisa simultaneamente:
+O circuito monitora a disponibilidade de energia renovável, o armazenamento em baterias e as condições da rede elétrica.
 
-* disponibilidade de energia solar;
-* disponibilidade da bateria;
-* horário de pico da rede;
-* necessidade de energia adicional.
+Quando o sistema detecta necessidade de energia complementar, a lógica avalia se existem condições adequadas para utilização dessa energia.
 
-A saída é ativada apenas quando as condições energéticas são adequadas para utilização da fonte complementar.
+Essa decisão permite complementar o carregamento dos veículos sem comprometer a estabilidade da rede.
 
 ---
 
@@ -239,90 +250,21 @@ A saída é ativada apenas quando as condições energéticas são adequadas par
 
 Componentes utilizados:
 
-* 4 entradas digitais;
-* 1 porta NOT;
-* 2 portas AND;
-* 1 porta OR;
-* 1 LED de saída.
+- 4 entradas digitais (DIP Switches);
+- 1 porta NOT;
+- 2 portas AND;
+- 1 porta OR;
+- 1 LED indicador de saída;
+- Painel solar representativo.
 
 ### Circuito no Tinkercad
 
-<img width="1014" height="691" alt="Captura de tela 2026-06-15 162944" src="https://github.com/user-attachments/assets/77cc7d57-0180-479b-8e83-f54db783b6ba" />
-
+<img width="1014" height="691" alt="Captura de tela 2026-06-15 162944" src="https://github.com/user-attachments/assets/19edc774-20a1-431c-b398-da9820d4354c" />
 
 ### Tabela Verdade
 
-<img width="205" height="359" alt="Captura de tela 2026-06-11 160745" src="https://github.com/user-attachments/assets/fe48cdb9-a253-4073-aa12-5123c4b7b2e8" />
+<img width="205" height="359" alt="Captura de tela 2026-06-11 160745" src="https://github.com/user-attachments/assets/666e73e3-bb0c-4e10-8483-a103a18930a8" />
 
----
-
-## Simulação
-
-Durante os testes foram avaliados diferentes cenários:
-
-### Cenário 1
-
-* Energia solar disponível
-* Necessidade de energia complementar
-
-Resultado:
-
-Fonte complementar autorizada.
-
-### Cenário 2
-
-* Sem energia solar
-* Bateria disponível
-* Fora do horário de pico
-
-Resultado:
-
-Fonte complementar autorizada.
-
-### Cenário 3
-
-* Sem energia solar
-* Horário de pico
-
-Resultado:
-
-Fonte complementar bloqueada.
-
----
-
-# 7. Relação com Sustentabilidade
-
-A solução contribui para:
-
-* melhor aproveitamento da energia solar;
-* utilização inteligente de armazenamento energético;
-* redução de desperdícios;
-* gerenciamento eficiente da demanda;
-* maior estabilidade da rede elétrica.
-
-Além disso, a utilização de algoritmos otimizados em Assembly reduz o consumo computacional do sistema de controle.
-
----
-
-# 8. Resultados Obtidos
-
-Os protótipos desenvolvidos demonstraram a viabilidade técnica da proposta.
-
-Resultados observados:
-
-* distribuição automática de potência;
-* prevenção de sobrecargas;
-* tomada de decisão energética baseada em condições reais;
-* redução da complexidade computacional;
-* integração entre gerenciamento de carga e fontes renováveis.
-
----
-
-# 9. Demonstração
-
-### Vídeo
-
-https://youtu.be/NVhbX1RP8ec
 
 ### Projeto Tinkercad
 
@@ -330,19 +272,97 @@ https://www.tinkercad.com/things/6ze0Bsg7X4t-sers-coa-challenge-fiap-goodwe-2026
 
 ---
 
-# 10. Tecnologias Utilizadas
+## Simulações Realizadas
 
-* Assembly x86-64
-* Tinkercad
-* Circuitos Lógicos Digitais
-* Álgebra Booleana
-* GitHub
+### Cenário 1
+
+- Energia solar disponível;
+- Necessidade de energia complementar.
+
+Resultado:
+
+✅ Fonte complementar autorizada.
 
 ---
 
-# 11. Referências
+### Cenário 2
 
-* GoodWe Technologies
-* Material das disciplinas de Arquitetura de Computadores
-* Material das disciplinas de Soluções em Energias Renováveis e Sustentáveis
-* Documentação Intel x86-64
+- Sem energia solar;
+- Bateria disponível;
+- Fora do horário de pico.
+
+Resultado:
+
+✅ Fonte complementar autorizada.
+
+---
+
+### Cenário 3
+
+- Sem energia solar;
+- Horário de pico.
+
+Resultado:
+
+❌ Fonte complementar bloqueada.
+
+---
+
+# Relação com Sustentabilidade
+
+A solução desenvolvida está alinhada aos conceitos de eficiência energética e energias renováveis.
+
+O módulo Assembly reduz o consumo computacional do sistema de controle, enquanto o circuito lógico prioriza o uso de energia solar e armazenamento energético quando disponíveis.
+
+Os principais benefícios são:
+
+- Melhor aproveitamento da energia renovável;
+- Redução de desperdícios;
+- Maior eficiência operacional;
+- Menor impacto sobre a rede elétrica;
+- Infraestrutura de recarga mais sustentável.
+
+---
+
+# Resultados Obtidos
+
+Os protótipos desenvolvidos demonstraram a viabilidade técnica da proposta.
+
+Foi possível validar:
+
+- Distribuição dinâmica de potência;
+- Proteção contra sobrecargas;
+- Tomada de decisão energética baseada em lógica digital;
+- Integração entre gerenciamento de carga e fontes renováveis;
+- Aplicação prática dos conceitos estudados durante o semestre.
+
+---
+
+# Demonstração
+
+## Vídeo
+
+https://youtu.be/NVhbX1RP8ec
+
+## Projeto Tinkercad
+
+https://www.tinkercad.com/things/6ze0Bsg7X4t-sers-coa-challenge-fiap-goodwe-2026-sprint-2
+
+---
+
+# Tecnologias Utilizadas
+
+- Assembly x86-64
+- Circuitos Lógicos Digitais
+- Álgebra Booleana
+- Tinkercad
+- GitHub
+
+---
+
+# Referências
+
+- GoodWe Technologies
+- Intel x86-64 Documentation
+- Material das disciplinas de Arquitetura de Computadores
+- Material das disciplinas de Soluções em Energias Renováveis e Sustentáveis
